@@ -138,6 +138,8 @@ function Popup(props) {
               className='popup-footer-btn'
               type='button'
               onClick={() => {
+                if (!add)
+                  return window.alert('PLEASE SELECT THE STORE LOCATION');
                 props.fetchSendData();
                 props.setTrigger(false);
                 props.setConfirm(true);

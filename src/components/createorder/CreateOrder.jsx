@@ -141,7 +141,10 @@ function CreateOrderPage() {
 
           <button
             className='createorder-proceed-btn'
-            onClick={() => setbuttonPopup(true)}
+            onClick={() => {
+              if (!state.length) return window.alert('PLEASE SELECT AN ITEM');
+              setbuttonPopup(true);
+            }}
           >
             Proceed
           </button>
