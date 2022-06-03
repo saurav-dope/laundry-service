@@ -22,9 +22,14 @@ const PostOrderMap = ({
       <td>{obj.storePhone}</td>
       <td>{obj.totalItems}</td>
       <td className='price'>{String(obj.price + 90)}</td>
-      <td>{obj.status}</td>
+      <td style={{ textAlign: 'center' }}>{obj.status}</td>
       <td
-        style={{ color: 'red', cursor: 'pointer' }}
+        style={{
+          color: 'red',
+          cursor: 'pointer',
+          width: '10rem',
+          textAlign: 'center',
+        }}
         onClick={(e) => {
           setTrigger(true);
           changeState({ pop: obj.popUp, id: obj._id, orderId: obj.orderId });

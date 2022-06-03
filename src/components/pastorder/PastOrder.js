@@ -35,7 +35,9 @@ const PastOrder = ({
                 <th>Total items</th>
                 <th>Price</th>
                 <th>Status</th>
-                <th>Cancellation</th>
+                <th style={{ textAlign: 'center', width: '10rem' }}>
+                  Cancellation
+                </th>
                 <th>View</th>
               </tr>
             </thead>

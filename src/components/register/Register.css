@@ -98,6 +98,7 @@
   letter-spacing: 0.3px;
   color: #ffffff;
   opacity: 1;
+  cursor: pointer;
 }
 
 .register-form-btn button:hover {
