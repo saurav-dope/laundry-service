@@ -14,7 +14,7 @@ const productList = [
   },
   {
     name: 'TShirts',
-    image: 'images/tshirt.jpg',
+    image: 'images/tshirt.jpeg',
     description: 'Lorem, ipsum dolor sit amet',
     price: 15,
   },
@@ -32,13 +32,13 @@ const productList = [
   },
   {
     name: 'Boxers',
-    image: 'images/boxers.jpg',
+    image: 'images/boxers.jpeg',
     description: 'Lorem, ipsum dolor sit amet',
     price: 30,
   },
   {
     name: 'Joggers',
-    image: 'images/joggers.jpg',
+    image: 'images/joggers.jpeg',
     description: 'Lorem, ipsum dolor sit amet',
     price: 35,
   },
