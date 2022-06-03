@@ -1,10 +1,11 @@
 .orders {
   display: flex;
   width: 96%;
-  height: 100vh;
   background-color: white;
   padding: 30px;
   position: relative;
+  overflow-y: auto;
+  height: 87vh;
 }
 
 .orders-confirm {
