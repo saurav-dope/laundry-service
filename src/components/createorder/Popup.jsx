@@ -115,6 +115,7 @@ function Popup(props) {
             <p className='popup-address-details-1-p2'>
               #223, 10th road, Jp Nagar, Bangalore
             </p>
+            <img className='address-icon' src="/images/address.png" alt="checked" />
           </div>
           <div
             className='popup-address-details-2'

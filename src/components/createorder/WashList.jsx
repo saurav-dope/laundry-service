@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import washNormal from "../../utils/washing-machine.png";
-import washBlue from "../../utils/washing-machine-clicked.png";
-import ironingNormal from "../../utils/ironing.png";
-import ironingBlue from "../../utils/ironing-clicked.png";
-import towelNormal from "../../utils/towel.png";
-import towelBlue from "../../utils/towel-clicked.png";
-import bleachNormal from "../../utils/bleach.png";
-import bleachBlue from "../../utils/bleach-clicked.png";
+import React, { useState, useEffect } from 'react';
+import washNormal from '../../utils/washing-machine.png';
+import washBlue from '../../utils/washing-machine-clicked.png';
+import ironingNormal from '../../utils/ironing.png';
+import ironingBlue from '../../utils/ironing-clicked.png';
+import towelNormal from '../../utils/towel.png';
+import towelBlue from '../../utils/towel-clicked.png';
+import bleachNormal from '../../utils/bleach.png';
+import bleachBlue from '../../utils/bleach-clicked.png';
 
 function WashList({ content, state, setState }) {
   const [singleCount, setsingleCount] = useState(0);
@@ -46,10 +46,10 @@ function WashList({ content, state, setState }) {
     const data = {
       name: content.name,
 
-      washType: `${washSelected === washBlue ? "Wash," : ""}${
-        ironingSelected === ironingBlue ? "Iron," : ""
-      }${towelSelected === towelBlue ? "DryClean," : ""}${
-        bleachSelected === bleachBlue ? "Bleach," : ""
+      washType: `${washSelected === washBlue ? 'Wash,' : ''}${
+        ironingSelected === ironingBlue ? 'Iron,' : ''
+      }${towelSelected === towelBlue ? 'DryClean,' : ''}${
+        bleachSelected === bleachBlue ? 'Bleach,' : ''
       }`,
 
       multiple: `${singleCount}X${content.price * count}`,
@@ -79,22 +79,22 @@ function WashList({ content, state, setState }) {
 
   return (
     <>
-      <div className="createorder-data">
-        <div className="createorder-productList">
+      <div className='createorder-data'>
+        <div className='createorder-productList'>
           <img
-            className="createorder-product-img"
+            className='createorder-product-img'
             src={content.image}
             alt={content.image}
           />
-          <div className="createorder-product-content">
-            <h3 className="createorder-product-h3">{content.name}</h3>
-            <p className="createorder-product-p">{content.description}</p>
+          <div className='createorder-product-content'>
+            <h3 className='createorder-product-h3'>{content.name}</h3>
+            <p className='createorder-product-p'>{content.description}</p>
           </div>
         </div>
-        <div className="createorder-quantity">
+        <div className='createorder-quantity'>
           <input
-            className="createorder-input"
-            type="number"
+            className='createorder-input'
+            type='number'
             min={0}
             value={singleCount}
             onChange={(e) => {
@@ -102,11 +102,11 @@ function WashList({ content, state, setState }) {
             }}
           />
         </div>
-        <div className="createorder-wash-section">
-          <div className="createorder-washing-machine">
+        <div className='createorder-wash-section'>
+          <div className='createorder-washing-machine'>
             <img
               src={washSelected}
-              alt="washing_machine"
+              alt='washing_machine'
               onClick={() =>
                 setwashSelected(
                   washSelected === washBlue ? washNormal : washBlue
@@ -114,10 +114,10 @@ function WashList({ content, state, setState }) {
               }
             />
           </div>
-          <div className="createorder-ironing">
+          <div className='createorder-ironing'>
             <img
               src={ironingSelected}
-              alt="ironing"
+              alt='ironing'
               onClick={() =>
                 setironingSelected(
                   ironingSelected === ironingBlue ? ironingNormal : ironingBlue
@@ -125,11 +125,11 @@ function WashList({ content, state, setState }) {
               }
             />
           </div>
-          <div className="createorder-towel">
+          <div className='createorder-towel'>
             <img
-              className="createorder-towel-icon"
+              className='createorder-towel-icon'
               src={towelSelected}
-              alt="towel"
+              alt='towel'
               onClick={() =>
                 settowelSelected(
                   towelSelected === towelBlue ? towelNormal : towelBlue
@@ -137,10 +137,10 @@ function WashList({ content, state, setState }) {
               }
             />
           </div>
-          <div className="createorder-bleach">
+          <div className='createorder-bleach'>
             <img
               src={bleachSelected}
-              alt="bleach"
+              alt='bleach'
               onClick={() =>
                 setbleachSelected(
                   bleachSelected === bleachBlue ? bleachNormal : bleachBlue
@@ -149,21 +149,25 @@ function WashList({ content, state, setState }) {
             />
           </div>
         </div>
-        <div className="createorder-price">
-          <p>
-            <span className="createorder-price-one">{singleCount}</span>X
-            <span className="createorder-price-one">
-              {content.price * count}
-            </span>
-            =
-            <span className="createorder-price-two">
-              {singleCount * content.price * count}
-            </span>
-          </p>
+        <div className='createorder-price'>
+          {singleCount * content.price * count ? (
+            <p>
+              <span className='createorder-price-one'>{singleCount}</span>X
+              <span className='createorder-price-one'>
+                {content.price * count}
+              </span>
+              =
+              <span className='createorder-price-two'>
+                {singleCount * content.price * count}
+              </span>
+            </p>
+          ) : (
+            <p style={{ position: 'relative', left: '5rem' }}>___</p>
+          )}
         </div>
-        <div className="createorder-price-calculation">
+        <div className='createorder-price-calculation'>
           <button
-            className="createorder-price-calculation-btn"
+            className='createorder-price-calculation-btn'
             onClick={handleClick}
           >
             Reset
