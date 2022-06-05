@@ -47,3 +47,51 @@
   color: #ffffff;
   width: 55%;
 }
+
+.dropbtn {
+  background-color: #5861ae;
+  color: white;
+  font-size: 16px;
+  border: none;
+  width: 143px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.username {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 78px;
+  width: 143px;
+}
+
+.username:hover .dropdown-content {
+  display: block;
+  color: #5861ae;
+  background-color: #e3e3e3;
+}
+
+.logout-button {
+  top: 88px;
+  color: #ffffff;
+  background-color: #5861ae;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: medium;
+}
+.logout-button:hover {
+  color: #5861ae;
+  background-color: white;
+  border: 1px solid #5861ae;
+  transition: 0.3s ease;
+}

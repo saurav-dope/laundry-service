@@ -5,6 +5,11 @@ import SignInLeft from './sign_in_left/SignInLeft';
 import './SignIn.css';
 
 const SignIn = () => {
+  window.history.forward();
+  function noBack() {
+    window.history.forward();
+  }
+
   const [user, setUser] = useState({
     Email: '',
     Password: '',
@@ -31,8 +36,8 @@ const SignIn = () => {
       const response = await jsonResponse.json();
       if (response.success) {
         navigate('/homepage');
-        sessionStorage.setItem('token', response.authtoken);
-        sessionStorage.setItem('name', response.name);
+        localStorage.setItem('token', response.authtoken);
+        localStorage.setItem('name', response.name);
       } else {
         window.alert(response.error);
       }
@@ -52,7 +57,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className='sign-in-wrapper'>
+    <div className='sign-in-wrapper' onLoad={noBack()}>
       <SignInLeft></SignInLeft>
       <div className='sign-in-right'>
         <div className='sign-in-right-wrapper'>
