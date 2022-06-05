@@ -63,7 +63,7 @@ function CreateOrderPage() {
     const jsonData = await fetch(process.env.REACT_APP_API + '/verify', {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: sessionStorage.getItem('token'),
+        Authorization: localStorage.getItem('token'),
       },
     });
     const response = await jsonData.json();
@@ -96,7 +96,7 @@ function CreateOrderPage() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: sessionStorage.getItem('token'),
+        Authorization: localStorage.getItem('token'),
       },
 
       body: JSON.stringify(data),

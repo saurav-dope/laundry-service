@@ -25,7 +25,7 @@ const Mainpage = () => {
     const jsonResponse = await fetch(process.env.REACT_APP_API + '/getOrder', {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: sessionStorage.getItem('token'),
+        Authorization: localStorage.getItem('token'),
       },
     });
     const response = await jsonResponse.json();
@@ -51,7 +51,7 @@ const Mainpage = () => {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: sessionStorage.getItem('token'),
+          Authorization: localStorage.getItem('token'),
         },
       }
     );
